@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  cursor: none;
+}
+
+.cursor-container {
+  position: relative;
+}
+
+.custom-cursor {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  pointer-events: none;
+  background-image: url("/images/cursor-mega.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  -webkit-transition: -webkit-transform 0.1s ease-out;
+  transition: -webkit-transform 0.1s ease-out;
+  transition: transform 0.1s ease-out;
+  transition: transform 0.1s ease-out, -webkit-transform 0.1s ease-out;
+}
+.custom-cursor::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  opacity: var(--glow-opacity, 0);
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.cursor-tooltip {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  -webkit-transform: translate(28px, 2px);
+          transform: translate(28px, 2px);
+  z-index: 9998;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: transparent;
+}
+
+::selection {
+  color: #fff;
+  background: transparent;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: red;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.site-content {
+  position: absolute;
+}
+
+.nav,
+.footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
+  pointer-events: auto;
+}
+
+.logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+  font-family: "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+.logo a img {
+  max-width: 30px;
+  height: auto;
+}
+.logo a span {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.hero-copy {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+.hero-copy.fade-out {
+  -webkit-animation: fadeOut 3s ease-out forwards;
+          animation: fadeOut 3s ease-out forwards;
+}
+.hero-copy.fade-out h1, .hero-copy.fade-out p {
+  -webkit-animation: colorChange 1s ease-out forwards;
+          animation: colorChange 1s ease-out forwards;
+}
+
+.hero-copy h1 {
+  font-size: 8vw;
+  color: #fff;
+  font-family: "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
+  font-transform: uppercase;
+  font-weight: 800;
+}
+
+.hero-copy p {
+  font-size: 2vw;
+  color: #fff;
+  font-family: "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
+  margin: 0.5em 0;
+}
+
+#heroVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes colorChange {
+  0% {
+    color: #ffffff;
+    text-shadow: 0 0 0 transparent;
+  }
+  25% {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(253, 208, 0, 0.9);
+  }
+  50% {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(253, 208, 0, 0.7);
+  }
+  75% {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(253, 208, 0, 0.5);
+  }
+  100% {
+    color: #fdd000;
+    text-shadow: 0 0 5px rgba(253, 208, 0, 0.3);
+  }
+}
+@keyframes colorChange {
+  0% {
+    color: #ffffff;
+    text-shadow: 0 0 0 transparent;
+  }
+  25% {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(253, 208, 0, 0.9);
+  }
+  50% {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(253, 208, 0, 0.7);
+  }
+  75% {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(253, 208, 0, 0.5);
+  }
+  100% {
+    color: #fdd000;
+    text-shadow: 0 0 5px rgba(253, 208, 0, 0.3);
+  }
+}/*# sourceMappingURL=style.css.map */
