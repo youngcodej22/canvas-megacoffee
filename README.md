@@ -11,6 +11,10 @@ use threejs, canvas, etc
 -   [font](https://fonts.google.com/)
 -   [custom-cursor](https://custom-cursor.com/)
 -   [이미지 배경삭제](https://www.remove.bg/)
+-   [textshadow](https://freefrontend.com/css-text-shadow-effects/)
+-   [deploy](https://www.youtube.com/watch?v=c9ul5iuBjrg&t=125s)
+-   [deploy2](https://www.youtube.com/watch?v=WJtetccrv3o)
+-   [deploy-cloudtype](https://cloudtype.io/)
 
 https://www.youtube.com/watch?v=p88rNckccmg&list=PLN0tvDAN1yvSNbkHAwPzJ5O4pP_e2vyme
 https://www.youtube.com/watch?v=Qj0Qx8HpNUo

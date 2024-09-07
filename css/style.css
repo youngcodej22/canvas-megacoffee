@@ -167,6 +167,7 @@ a {
           animation: fadeOut 3s ease-out forwards;
 }
 .hero-copy.fade-out h1, .hero-copy.fade-out p {
+  will-change: filter, color;
   -webkit-animation: colorChange 1s ease-out forwards;
           animation: colorChange 1s ease-out forwards;
 }
@@ -215,43 +216,63 @@ a {
   0% {
     color: #ffffff;
     text-shadow: 0 0 0 transparent;
+    -webkit-filter: saturate(200%) hue-rotate(20deg);
+            filter: saturate(200%) hue-rotate(20deg);
   }
   25% {
     color: #ffd700;
-    text-shadow: 0 0 5px rgba(253, 208, 0, 0.9);
+    text-shadow: 0 0 4px rgb(255, 238, 0);
+    -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 238, 0));
+            filter: drop-shadow(0px 0px 10px rgb(255, 238, 0));
   }
   50% {
     color: #ffd700;
-    text-shadow: 0 0 5px rgba(253, 208, 0, 0.7);
+    text-shadow: 0 0 4px rgb(255, 238, 0);
+    -webkit-filter: drop-shadow(0px 0px 20px rgb(255, 238, 0));
+            filter: drop-shadow(0px 0px 20px rgb(255, 238, 0));
   }
   75% {
     color: #ffd700;
-    text-shadow: 0 0 5px rgba(253, 208, 0, 0.5);
+    text-shadow: 0 0 4px rgb(255, 238, 0);
+    -webkit-filter: drop-shadow(0px 0px 30px rgb(255, 238, 0));
+            filter: drop-shadow(0px 0px 30px rgb(255, 238, 0));
   }
   100% {
     color: #fdd000;
-    text-shadow: 0 0 5px rgba(253, 208, 0, 0.3);
+    text-shadow: 0 0 4px rgb(255, 238, 0);
+    -webkit-filter: drop-shadow(0px 0px 40px rgb(255, 238, 0));
+            filter: drop-shadow(0px 0px 40px rgb(255, 238, 0));
   }
 }
 @keyframes colorChange {
   0% {
     color: #ffffff;
     text-shadow: 0 0 0 transparent;
+    -webkit-filter: saturate(200%) hue-rotate(20deg);
+            filter: saturate(200%) hue-rotate(20deg);
   }
   25% {
     color: #ffd700;
-    text-shadow: 0 0 5px rgba(253, 208, 0, 0.9);
+    text-shadow: 0 0 4px rgb(255, 238, 0);
+    -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 238, 0));
+            filter: drop-shadow(0px 0px 10px rgb(255, 238, 0));
   }
   50% {
     color: #ffd700;
-    text-shadow: 0 0 5px rgba(253, 208, 0, 0.7);
+    text-shadow: 0 0 4px rgb(255, 238, 0);
+    -webkit-filter: drop-shadow(0px 0px 20px rgb(255, 238, 0));
+            filter: drop-shadow(0px 0px 20px rgb(255, 238, 0));
   }
   75% {
     color: #ffd700;
-    text-shadow: 0 0 5px rgba(253, 208, 0, 0.5);
+    text-shadow: 0 0 4px rgb(255, 238, 0);
+    -webkit-filter: drop-shadow(0px 0px 30px rgb(255, 238, 0));
+            filter: drop-shadow(0px 0px 30px rgb(255, 238, 0));
   }
   100% {
     color: #fdd000;
-    text-shadow: 0 0 5px rgba(253, 208, 0, 0.3);
+    text-shadow: 0 0 4px rgb(255, 238, 0);
+    -webkit-filter: drop-shadow(0px 0px 40px rgb(255, 238, 0));
+            filter: drop-shadow(0px 0px 40px rgb(255, 238, 0));
   }
 }/*# sourceMappingURL=style.css.map */
