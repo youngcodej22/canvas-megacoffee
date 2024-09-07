@@ -2,7 +2,7 @@
 
 ## Title & Link
 
--   (O-MEGA-COFFEE)[https://omegacoffee.netlify.app/]
+-   [O-MEGA-COFFEE](https://omegacoffee.netlify.app/)
 
 ## Skill
 
